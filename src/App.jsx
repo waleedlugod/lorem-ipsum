@@ -20,11 +20,14 @@ function App() {
 			<form className="lorem-form" onSubmit={handleSubmit}>
 				<label htmlFor="paragraphs">Paragraphs:</label>
 				<input
-					type="text"
+					type="number"
 					id="paragraphs"
 					value={numPs}
+					step="1"
+					min="0"
 					onChange={handleChange}
 				/>
+				<button className="btn">GENERATE</button>
 			</form>
 			{text.map((paragraph) => {
 				return <p>{paragraph}</p>;
